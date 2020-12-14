@@ -19,7 +19,9 @@ class Register extends Component {
             errors: {
                 email: '',
                 password: '',
-            }
+            },
+            successMail: false,
+            successPass: false
         };
     }
 
@@ -36,19 +38,18 @@ class Register extends Component {
         event.preventDefault();
         const { name, value } = event.target;
         let errors = this.state.errors;
-
         switch (name) {
             case 'email':
-                errors.email =
-                    validEmailRegex.test(value)
-                        ? ''
-                        : 'Email is not valid!';
+                errors.email = (value === "jhotech@gmail.com.vn") ? "" : 
+                    !validEmailRegex.test(value)
+                        ? 'Email is not valid!'
+                        : 'Password error' 
                 break;
             case 'password':
-                errors.password =
-                    value.length < 8
-                        ? 'Password must be 8 characters long!'
-                        : '';
+                errors.password = (value === 'tech1234') ? "": value.length < 8
+                    ? 'Password must be 8 characters long!'
+                    : "Password error"
+
                 break;
             default:
                 break;
@@ -56,8 +57,6 @@ class Register extends Component {
 
         this.setState({ errors, [name]: value });
     }
-
-
 
     render() {
         const { errors } = this.state;
@@ -83,8 +82,8 @@ class Register extends Component {
                             <label class="rePass" >Ghi nhớ tài khoản</label>
                         </div>
                     </div>
-                    <div className='submit'>
-                        <button>Đăng nhập</button>
+                    <div className='submit' >
+                        <button data-dismiss={(errors.email === ""  && errors.password === "" )? "modal" : ""}>Đăng nhập</button>
                     </div>
                     <div className='info'>
                         <small>Cần trợ giúp?</small>

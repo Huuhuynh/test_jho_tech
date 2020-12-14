@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './header.css'
 import { Register } from '../loginForm/index'
+import avatar from '../../components/images/avatar.png'
 
 const Header = () => {
 
@@ -10,9 +11,11 @@ const Header = () => {
                 <div className="navbar-brand" href="index.html">
                     <ul className="navbar-nav ml-auto ml-md-0">
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-user fa-fw" /></a>
+                            <a className="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src={avatar} style={{marginRight: 10}}/>
+                                <div style={{display: 'contents', fontSize: 14, color: 'white', marginRight: 13, marginLeft: 10}}>Jho Tech</div>
+                            </a>
                             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                <a className="dropdown-item" href="#">Settings</a>
                                 <a className="dropdown-item">
                                     <div data-toggle="modal" data-target="#exampleModalCenter">Login</div>
                                 </a>
@@ -47,9 +50,7 @@ const Header = () => {
             </nav>
             <nav className="sb-bottomnav">
             </nav>
-            {/* {
-                isModal && <Modal isModal={isModal} closeModal={closeModal}/>
-            } */}
+
             <div className="modal fade" id="exampleModalCenter" tabIndex={-1} role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">
