@@ -1,15 +1,16 @@
 .container {
     width: 200px;
-    margin-top: 30px;
+    margin-top: 20px;
     flex-direction: column;
 }
 .img_1 {
     background-image: url(../../components/images/advertisement_1.png);
     width: 160px;
-    height: 363px;
+    height: 345px;
 }
 .img_2 {
     background-image: url(../../components/images/advertisement_2.png);
     width: 160px;
-    height: 380px;
+    height: 310px;
+    margin-top: 15px;
 }

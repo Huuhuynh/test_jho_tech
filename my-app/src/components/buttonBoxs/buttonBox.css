@@ -1,0 +1,21 @@
+.box_btn {
+    background-color: white;
+    width: 290px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-direction: row;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    padding-left: 80px;
+}
+.icon_btn {
+    width: 18px;
+    height: 18px;
+    margin-right: 9px;
+}
+.text_btn {
+    font-size: 15px;
+    color: black;
+}

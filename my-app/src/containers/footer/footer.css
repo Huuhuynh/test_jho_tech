@@ -1,0 +1,11 @@
+.box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+.style_box {
+    margin-left: 115px;
+    padding-left: inherit;
+    font-size: 13px;
+    color: #0046AA;
+  }

@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
+import icon_all from '../icons/icon_all.png';
+import './buttonBox.css'
 
-const ButtonBox =()=> {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
+const ButtonBox = (props) => {
+    console.log({props});
+    // Declare a new state variable, which we'll call "count"
+    const [count, setCount] = useState(0);
 
-  return (
-    <div style={{backgroundColor: 'red', width: 100, height: 50}}>
-     
-    </div>
-  );
+    return (
+        <div className="box_btn">
+            <img src={props?.iconName} className="icon_btn"/>
+            <div className="text_btn">{props?.textItem}</div>
+        </div>
+    );
 }
 export default ButtonBox;
