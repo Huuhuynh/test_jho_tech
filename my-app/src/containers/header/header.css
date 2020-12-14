@@ -19,8 +19,8 @@
     flex-direction: row;
     align-items: center;
     display: flex;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .seperate {
     background-color: #c0c0c0;
@@ -38,7 +38,6 @@
     width: 400px;
     height: 1px;
     margin-top: 19px;
-    margin-left: 40px;
 }
 .title_login_form {
     font-size: 17px;
@@ -69,4 +68,9 @@
     line-height: 20px;
     color: #cadefb;
     margin-top: 28px;
+}
+.logo_header {
+    background-image: url(../../components/images/logo.png);
+    width: 80px;
+    height: 37px;
 }

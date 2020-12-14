@@ -1,0 +1,55 @@
+.header_sidebar {
+    background: #0046AA;
+    border-radius: 5px 0px 0px 0px;
+    height: 50px;
+    width: 100%;
+    color: #ffffff;
+    font-size: 15px;
+    padding-left: 18px;
+    padding-top: 16px;
+}
+.icon_all {
+    background-image: url(../../components/icons/icon_all.png);
+    width: 18px;
+    height: 13px;
+}
+.icon_love {
+    background-image: url(../../components/icons/icon_love.png);
+    width: 18px;
+    height: 16px;
+}
+.icon_agriculture {
+    background-image: url(../../components/icons/icon_agriculture.png);
+    width: 18px;
+    height: 18px;
+}
+.products_agriculture {
+    margin-left: 55px !important;
+    color: #000;
+    margin-bottom: 9px;
+}
+.icon_resources {
+    background-image: url(../../components/icons/icon_resources.png);
+    width: 18px;
+    height: 18px;
+}
+.icon_energy {
+    background-image: url(../../components/icons/icon_energy.png);
+    width: 18px;
+    height: 18px;
+}
+.icon_metal {
+    background-image: url(../../components/icons/icon_metal.png);
+    width: 18px;
+    height: 18px;
+}
+.icon_star {
+    background-image: url(../../components/icons/icon_star.png);
+    width: 18px;
+    height: 18px;
+}
+.icon_calendar {
+    background-image: url(../../components/icons/icon_calendar.png);
+    width: 18px;
+    height: 18px;
+}

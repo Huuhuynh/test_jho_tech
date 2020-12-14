@@ -1,32 +1,20 @@
 import React, { useState } from 'react';
-import Modal from '../../components/modal';
 import './header.css'
+import { Register } from '../loginForm/index'
 
 const Header = () => {
-    // Declare a new state variable, which we'll call "count"
-    const [isModal, setModal] = useState(false);
-
-    const showModal = () => {
-        setModal(true)
-    }
-
-    const closeModal = () => {
-        setModal(false)
-    }
 
     return (
         <>
             <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
                 <div className="navbar-brand" href="index.html">
-                    <ul className=" ml-auto ml-md-0">
+                    <ul className="navbar-nav ml-auto ml-md-0">
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-user fa-fw" /></a>
                             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                                 <a className="dropdown-item" href="#">Settings</a>
                                 <a className="dropdown-item">
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                        Launch demo modal
-</button>
+                                    <div data-toggle="modal" data-target="#exampleModalCenter">Login</div>
                                 </a>
                                 <div className="dropdown-divider" />
                                 <a className="dropdown-item" href="login.html">Logout</a>
@@ -34,20 +22,18 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-                <nav class="nav justify-content-center">
-                    áldjlasdladds
-                </nav>
+                <div class="navbar-brand mx-auto logo_header" />
                 {/* Navbar Search*/}
                 <form className="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
                     <div className="input-group">
-                        <input className="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
+                        <input className="form-control" type="text" placeholder="Tìm kiếm..." aria-label="Search" aria-describedby="basic-addon2" />
                         <div className="input-group-append">
                             <button className="btn btn-primary" type="button"><i className="fas fa-search" /></button>
                         </div>
                     </div>
                 </form>
                 {/* Navbar*/}
-                <ul className="navbar-nav ml-auto ml-md-0">
+                {/* <ul className="navbar-nav ml-auto ml-md-0">
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-user fa-fw" /></a>
                         <div className="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
@@ -57,10 +43,9 @@ const Header = () => {
                             <a className="dropdown-item" href="login.html">Logout</a>
                         </div>
                     </li>
-                </ul>
+                </ul> */}
             </nav>
             <nav className="sb-bottomnav">
-
             </nav>
             {/* {
                 isModal && <Modal isModal={isModal} closeModal={closeModal}/>
@@ -92,26 +77,7 @@ const Header = () => {
                             </div>
                             <div className="seperate_width"></div>
                             <div className="title_login_form">ĐĂNG NHẬP TÀI KHOẢN</div>
-                            <form>
-                                <div className="form-group">
-                                    <label className="small mb-1" htmlFor="inputEmailAddress">Email</label>
-                                    <input className="form-control py-4" id="inputEmailAddress" type="email" placeholder="Enter email address" />
-                                </div>
-                                <div className="form-group">
-                                    <label className="small mb-1" htmlFor="inputPassword">Password</label>
-                                    <input className="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" />
-                                </div>
-                                <div className="form-group">
-                                    <div className="custom-control custom-checkbox">
-                                        <input className="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
-                                        <label className="custom-control-label" htmlFor="rememberPasswordCheck">Ghi nhớ tài khoản</label>
-                                    </div>
-                                </div>
-                                <div className="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                    <a className="small" href="password.html">Forgot Password?</a>
-                                    <a className="btn btn-primary" href="index.html">Login</a>
-                                </div>
-                            </form>
+                            <Register />
                         </div>
                     </div>
                 </div>
